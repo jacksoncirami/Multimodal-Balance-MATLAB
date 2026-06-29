@@ -1,6 +1,9 @@
 %% 1. Configuration & Network Setup
 clear; clc;
 
+% UPDATE THIS: Path to your pre-compiled Win64 LSL folder
+addpath(genpath('C:\Users\hpuminds\Downloads\liblsl-Matlab-1.14.0-Win_amd64_R2020b\liblsl-Matlab'));
+
 % Default Bertec network parameters
 bertec_ip = '127.0.0.1'; % Localhost
 bertec_port = 5000;       % Adjust to match your Bertec server port settings
