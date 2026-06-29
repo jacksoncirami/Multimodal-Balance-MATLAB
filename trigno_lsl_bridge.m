@@ -1,7 +1,7 @@
 %% 1. Configuration & Setup
 clear; clc;
 
-
+% Default Trigno network parameters
 delsys_ip = '127.0.0.1'; % Localhost loopback
 cmd_port = 50040;        % Delsys Command Communication Port
 emg_port = 50041;        % Delsys Raw EMG Data Port
