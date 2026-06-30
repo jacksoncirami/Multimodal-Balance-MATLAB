@@ -1,4 +1,6 @@
-    %% 1. Configure Path and Initialize LSL
+    %% 1. Configuration & Setup
+    clear; clc;
+
     % UPDATE THIS: Path to your LSL library folder
     lsl_path = 'C:\Users\hpuminds\Downloads\liblsl-Matlab-1.14.0-Win_amd64_R2020b\liblsl-Matlab';
 
