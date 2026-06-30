@@ -1,4 +1,3 @@
-function manual_marker_pad()
     %% 1. Configure Path and Initialize LSL
     % CHANGE THIS PATH to match your actual liblsl-Matlab folder location
     lsl_path = 'C:\Users\hpuminds\Downloads\liblsl-Matlab-1.14.0-Win_amd64_R2020b\liblsl-Matlab';
@@ -110,7 +109,6 @@ function manual_marker_pad()
                    'BackgroundColor', gray_color, 'ForegroundColor', text_color, ...
                    'Callback', @(~,~) send_live_marker(outlet, 'One Leg Step Initiation'));
     set(b9, 'Position', [startX, startY - 8*spacing - 10, btnWidth, btnHeight + 10]);
-end
 
 %% 5. HELPER FUNCTION TO PUSH SAMPLES INTO THE RECORDING STREAM
 function send_live_marker(outlet, marker_text)
