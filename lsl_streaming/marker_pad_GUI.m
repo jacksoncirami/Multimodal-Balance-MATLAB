@@ -14,7 +14,7 @@
         error('CRITICAL ERROR: Could not load LSL library. Please verify your lsl_path is correct!');
     end
 
-    %% 2. REGISTER THE STREAM WITH THE NETWORK
+    %% 2. Register the stream with the network
     % Creates a stream named 'GuiMarkers' of type 'Markers' that LabRecorder looks for
     info = lsl_streaminfo(lib, 'GuiMarkers', 'Markers', 1, 0, 'cf_string', 'gui_marker_pad_999');
     outlet = lsl_outlet(info);
@@ -25,7 +25,7 @@
     disp(' -> Open LabRecorder, hit Refresh, and check "GuiMarkers".');
     disp('======================================================');
 
-    %% 3. DEFINE INTERFACE COORDINATES & SCALING
+    %% 3. Define Interface Coordinates & Scaling
     winWidth = 320;
     winHeight = 540;
 
@@ -47,7 +47,7 @@
     startY = 480;
     spacing = 50;
 
-    %% 4. BUILD THE LIVE INTERFACE BUTTONS
+    %% 4. Build the Live Interface Buttons
     
     % Button 1: Trial Start
     b1 = uicontrol('Parent', fig, 'Style', 'pushbutton', 'String', 'Trial Start', ...
@@ -112,7 +112,7 @@
                    'Callback', @(~,~) send_live_marker(outlet, 'One Leg Step Initiation'));
     set(b9, 'Position', [startX, startY - 8*spacing - 10, btnWidth, btnHeight + 10]);
 
-%% 5. HELPER FUNCTION TO PUSH SAMPLES INTO THE RECORDING STREAM
+%% 5. Helper Function to Push Samples Into the Recording Stream
 function send_live_marker(outlet, marker_text)
     % Transmits the marker instantly over the network to LabRecorder
     outlet.push_sample({marker_text});
