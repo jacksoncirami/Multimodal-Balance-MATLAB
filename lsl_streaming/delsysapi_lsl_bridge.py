@@ -1,4 +1,4 @@
-# Open powershell and change working directory to Delsys python folder; cd "C:\Users\hpuminds\Downloads\Example-Applications-main\Python"
+# Open powershell and change working directory to Delsys python folder; cd "C:\Users\hpuminds\Downloads\Example-Applications-main\Example-Applications-main\Python"
 
 from pathlib import Path
 import time
